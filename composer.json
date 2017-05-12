@@ -1,0 +1,9 @@
+{
+  "repositories": [
+    { "type": "composer", "url": "https://composer.typo3.org/" }
+  ],
+  "name": "punktde/proserver-typo3-box",
+  "require": {
+    "typo3/cms": "~8.7"
+  }
+}
