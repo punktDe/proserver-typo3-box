@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision 'shell', inline: <<-SHELL
     sudo -u proserver rm -f /var/www/typo3/index.html
-    sudo -u proserver git clone https://gitlab.pluspunkthosting.de/T3O/proserver-typo3-box.git /var/www/typo3
+    sudo -u proserver git clone git@gitlab.pluspunkthosting.de:opensource/proserver-typo3-box.git /var/www/typo3
     cd /var/www/typo3
     sudo -u proserver composer install
     sudo -u proserver touch /var/www/typo3/FIRST_INSTALL
