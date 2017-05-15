@@ -16,8 +16,10 @@ Vagrant.configure("2") do |config|
     sudo -u proserver composer install
     sudo -u proserver touch /var/www/typo3/FIRST_INSTALL
     echo "################################################################################"
-    echo "Go to https://172.17.28.28 and follow the installation process."
-    echo "Your database root password is: $(sudo cat /usr/local/etc/mysql-password)"
+    echo "Go to https://172.17.28.28 and follow the TYPO3 installation process."
+    echo "These are your database credentials:"
+    echo "User: root"
+    echo "Password: $(sudo cat /usr/local/etc/mysql-password)"
     echo "################################################################################"
   SHELL
 end
