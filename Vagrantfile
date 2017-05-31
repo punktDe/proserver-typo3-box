@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
     cd /var/www/typo3
     sudo -u proserver composer install
     sudo -u proserver touch /var/www/typo3/FIRST_INSTALL
+    sed -i '' 's/neos/typo3/g' /usr/local/etc/nginx/vhosts/ssl.conf
+    service nginx reload
     echo "################################################################################"
     echo "Go to https://172.17.28.28 and follow the TYPO3 installation process."
     echo "These are your database credentials:"
