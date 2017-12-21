@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = 'punktde/proserver'
-  config.vm.box_url = "https://boxes.hosting.punkt.de/freebsd-110-ufs-2017Q2-ap24-php70.json"
+  config.vm.box_url = "https://boxes.hosting.punkt.de/freebsd-111-ufs-HEAD-php72-es2.json"
   config.vm.synced_folder '.', '/vagrant', id: 'vagrant-root', disabled: true
   config.vm.network 'private_network', ip: '172.17.28.28'
   config.ssh.forward_agent = true
@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     cd /var/www/typo3
     sudo -u proserver composer install
     sudo -u proserver touch /var/www/typo3/FIRST_INSTALL
-    sed -i '' 's/neos/typo3/g' /usr/local/etc/nginx/vhosts/ssl.conf
+    sudo sed -i conf 's/welcome/typo3/' /usr/local/etc/nginx/vhosts/ssl.conf
     service nginx reload
     echo "################################################################################"
     echo "Go to https://172.17.28.28 and follow the TYPO3 installation process."
