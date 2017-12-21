@@ -4,6 +4,12 @@
   ],
   "name": "punktde/proserver-typo3-box",
   "require": {
-    "typo3/cms": "~9.0"
+    "typo3/minimal": "~9.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "web"
+    }
   }
 }
