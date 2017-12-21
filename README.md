@@ -8,7 +8,7 @@ Installation
 ------------
 
 Clone this repository or just download the [Vagrantfile][] and run `vagrant up`
-to try the current [TYPO3 9.0][] release on [PHP 7.2][].
+to try the current [TYPO3][] 9.0 release on [PHP 7.2][].
 
 See [TYPO3 News][] for further information.
 
