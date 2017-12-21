@@ -9,12 +9,12 @@ Vagrant.configure("2") do |config|
     vb.cpus = '1'
     vb.name = 'typo3'
   end
-  config.vm.provision 'shell', inline: <<-SHELL
+  config.vm.provision 'shell', keep_color: true, inline: <<-SHELL
     sudo -u proserver rm -f /var/www/typo3/index.html
     sudo -u proserver git clone https://ry28@gitlab.pluspunkthosting.de/opensource/proserver-typo3-box.git /var/www/typo3
     cd /var/www/typo3
     sudo -u proserver composer install
-    sudo -u proserver touch /var/www/typo3/FIRST_INSTALL
+    sudo -u proserver touch /var/www/typo3/web/FIRST_INSTALL
     sudo sed -i conf 's/welcome/typo3/' /usr/local/etc/nginx/vhosts/ssl.conf
     service nginx reload
     echo "################################################################################"
