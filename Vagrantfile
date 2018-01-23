@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision 'shell', keep_color: true, inline: <<-SHELL
     sudo -u proserver rm -f /var/www/typo3/index.html
-    sudo -u proserver git clone https://ry28@gitlab.pluspunkthosting.de/opensource/proserver-typo3-box.git /var/www/typo3
+    sudo -u proserver git clone https://github.com/punktDe/proserver-typo3-box.git /var/www/typo3
     cd /var/www/typo3
     sudo -u proserver composer install
     sudo -u proserver touch /var/www/typo3/web/FIRST_INSTALL
