@@ -18,9 +18,11 @@ Vagrant.configure("2") do |config|
     service nginx reload
     echo "################################################################################"
     echo "Go to https://172.17.28.28 and follow the TYPO3 installation process."
-    echo "These are your database credentials:"
-    echo "User: root"
-    echo "Password: $(sudo cat /usr/local/etc/mysql-password)"
+    echo "  These are your database credentials:"
+    echo "    User: root"
+    echo "    Password: $(sudo cat /usr/local/etc/mysql-password)"
+    echo "Finally activate the official Introduction Package in the extension manager."
+    echo "Have fun!"
     echo "################################################################################"
   SHELL
 end
