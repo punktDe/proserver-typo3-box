@@ -3,6 +3,7 @@
     { "type": "composer", "url": "https://composer.typo3.org/" }
   ],
   "name": "punktde/proserver-typo3-box",
+  "license": "MIT",
   "require": {
     "typo3/minimal": "~9.1",
     "typo3/cms-tstemplate": "~9.1",
